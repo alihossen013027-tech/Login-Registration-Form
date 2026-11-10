@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:card_page.dart
 import 'package:flutter/material.dart';
 
 class CardPage extends StatelessWidget {
@@ -55,3 +56,36 @@ class CardPage extends StatelessWidget {
     );
   }
 }
+=======
+import 'package:flutter/material.dart';
+
+class CardPage extends StatelessWidget {
+  const CardPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Cards')),
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: const [
+          Card(
+            child: ListTile(
+              title: Text('Card Item 1'),
+              subtitle: Text('This is a description for card 1.'),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: Text('Card Item 2'),
+              subtitle: Text('This is a description for card 2.'),
+              trailing: Icon(Icons.arrow_forward),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+>>>>>>> Stashed changes:lib/card_page.dart

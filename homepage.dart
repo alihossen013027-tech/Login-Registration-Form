@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:homepage.dart
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -42,3 +43,39 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+=======
+import 'package:flutter/material.dart';
+
+class Homepage extends StatelessWidget {
+  const Homepage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Home')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Welcome to Home Page!', style: TextStyle(fontSize: 20)),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cards');
+              },
+              child: const Text('View Cards'),
+            ),
+            const SizedBox(height: 10),
+            TextButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/');
+              },
+              child: const Text('Logout', style: TextStyle(color: Colors.red)),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+>>>>>>> Stashed changes:lib/homepage.dart
